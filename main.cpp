@@ -2,49 +2,57 @@
 
 using namespace std;
 
-string pass,language,cinrule;
+string pass,language,cinrule,temp;
 int f1,f2;
 string lang[2];
 string res;
 
 void str_find(string a){
-    a.insert(0," ");
-    int x1=-1,x2=-1;int t=0;int i=0;//x1x2±ê¼ÇÎ»ÖÃ
-    lang[0]=lang[1]="";//¶¨ÒåÊä³ö
+    a.insert(0," ");//æ’å…¥ç©ºæ ¼ä»¥ä¿è¯f1å’Œf2å–å€¼ç»Ÿä¸€
+    int x1=-1,x2=-1;int t=0;int i=0;//x1x2æ ‡è®°ä½ç½®
+    lang[0]=lang[1]="";//å®šä¹‰è¾“å‡º
     for(;i<a.length();i++){
-        if(a[i]==' ')t++;//»»ÓïÑÔ
-        if(t==f1&&x1==-1){x1=i+1;}//±ê¼ÇÓïÑÔ1Î»ÖÃ
-        if(t==f1+1&&lang[0]==""){lang[0]=a.substr(x1,i-x1);}//ÓïÑÔ1½áÊø
-        if(t==f2&&x2==-1){x2=i+1;}//±ê¼ÇÓïÑÔ2Î»ÖÃ
-        if(t==f2+1&&lang[1]==""){lang[1]=a.substr(x2,i-x2);}//ÓïÑÔ2½áÊø
+        if(a[i]==' ')t++;//æ¢è¯­è¨€
+        if(t==f1&&x1==-1){x1=i+1;}//æ ‡è®°è¯­è¨€1ä½ç½®
+        if(t==f1+1&&lang[0]==""){lang[0]=a.substr(x1,i-x1);}//è¯­è¨€1ç»“æŸ
+        if(t==f2&&x2==-1){x2=i+1;}//æ ‡è®°è¯­è¨€2ä½ç½®
+        if(t==f2+1&&lang[1]==""){lang[1]=a.substr(x2,i-x2);}//è¯­è¨€2ç»“æŸ
     }
-    if(lang[0]=="")lang[0]=a.substr(x1,i);//·ÀÖ¹½áÊøÃ»ÓĞ´æÈë
+    if(lang[0]=="")lang[0]=a.substr(x1,i);//é˜²æ­¢ç»“æŸæ²¡æœ‰å­˜å…¥
     if(lang[1]=="")lang[1]=a.substr(x2,i-x2);
     return;
 }
 
 int main()
 {
-    fstream cin1,cin2,cout1;//´ò¿ªÎÄ¼ş
-    cin1.open("language.txt",fstream::in);//´ò¿ªÉè¶¨ÎÄ¼ş
-    cout1.open("result",fstream::out);//Êä³öÎÄ¼ş
-    getline(cin1,language);//»ñÈ¡Êä³ö¹æÔò
-    getline(cin1,cinrule);//»ñÈ¡Êä³ö¹æÔò
+    fstream cin1,cin2,cout1;//æ‰“å¼€æ–‡ä»¶
+    cin1.open("language.txt",fstream::in);//æ‰“å¼€è®¾å®šæ–‡ä»¶
+    cout1.open("result",fstream::out);//è¾“å‡ºæ–‡ä»¶
+    getline(cin1,language);//è·å–è¾“å‡ºè§„åˆ™
+    getline(cin1,cinrule);//è·å–è¾“å‡ºè§„åˆ™
     cout<<cinrule;
-    cin>>pass;//ÌîĞ´ÎÄ¼şÂ·¾¶
-    cin2.open("then.txt",fstream::in);//bzdÔõÃ´Ğ´
-    getline(cin1,cinrule);//»ñÈ¡Êä³ö¹æÔò
+    cin>>pass;//å¡«å†™æ–‡ä»¶è·¯å¾„
+    cin2.open("then.txt",fstream::in);//bzdæ€ä¹ˆå†™
+    getline(cin1,cinrule);//è·å–è¾“å‡ºè§„åˆ™
     cout<<language<<endl<<cinrule;
-    cin>>f1;//ÊäÈëÓïÑÔ
-    getline(cin1,cinrule);//»ñÈ¡Êä³ö¹æÔò
+    cin>>f1;//è¾“å…¥è¯­è¨€
+    getline(cin1,cinrule);//è·å–è¾“å‡ºè§„åˆ™
     cout<<cinrule;
-    cin>>f2;//Êä³öÓïÑÔ
-    while(getline(cin1,language)){//Ã¿Ò»Ìõ³ÌĞò
-        str_find(language);//ÕÒµ½ÊäÈëºÍÊä³öÓïÑÔËùÔÚÎ»ÖÃ²¢´æ´¢
-//        cout<<lang[0]<<" "<<lang[1]<<endl;
-        while(getline(cin2,res)){
-
+    cin>>f2;//è¾“å‡ºè¯­è¨€
+    while(getline(cin2,res)){//è¯»å–æ¯ä¸€è¡Œç¨‹åº
+        cin1.clear();//æ¸…é™¤è¯­è¨€æ–‡ä»¶è¯»å–è¿›åº¦
+        cin1.seekg(0,ios::beg);
+        for(int i=0;i<4;i++)getline(cin1,temp);
+        while(getline(cin1,language)){//æ¯ä¸€æ¡è¯­è¨€
+            str_find(language);//æ‰¾åˆ°è¾“å…¥å’Œè¾“å‡ºè¯­è¨€æ‰€åœ¨ä½ç½®å¹¶å­˜å‚¨
+            int index;
+            while(res.find(lang[0])>=0&&res.find(lang[0])<res.length()){//åˆ¤æ–­æ˜¯å¦å­˜åœ¨
+                index=res.find(lang[0]);//è·å–åŸè¯­è¨€æ‰€åœ¨ä½ç½®
+                res.erase(index,lang[0].length());//åˆ é™¤åŸè¯­è¨€
+                res.insert(index,lang[1]);//æ”¹ä¸ºæ–°è¯­è¨€
+            }
         }
+        cout1<<res<<endl;
     }
     return 0;
 }
