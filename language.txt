@@ -11,7 +11,7 @@ main 主要函数 主要函數
 char 字符 字符
 string 字符串 字符串
 if 如果 如果
-return 返回
+return 返回 返回
 continue 跳转下一次循环 跳轉下一次循環
 break 终止 終止
 while 条件循环 條件循環
