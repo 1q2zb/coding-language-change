@@ -1,36 +1,51 @@
-1:English 2:中文简体 3:中文繁體 4:日本語
-please enter the file path you want to change 请输入想要更改的文件路径 請輸入想要更改的文件路徑:
-please enter the original language(the option serial number) 请输入原始语言 請輸入原始語言:
-please fill in the language you want to change(the option serial number) 请输入想要更改后的语言 請輸入想要更改後的語言:
-include 包含头文件 包含圖文件
-std 标准 標準
-using 使用 使用
-namespace 命名空间 命名空間
-int 整数 整數
-main 主要函数 主要函數
-char 字符 字符
-string 字符串 字符串
-if 如果 如果
-return 返回 返回
-continue 跳转下一次循环 跳轉下一次循環
-break 终止 終止
-while 条件循环 條件循環
-for 遍历循环 遍歷循環
-insert 插入 插入
-void 无类型 無類型
-else 否则 否則
-bool 布尔 布爾
-class 类 類
-const 常量 常量
-default 默认 默認
-delete 刪除 删除
-false 假 假
-long 长整数 長整數
-short 短整数 短整數
-struct 结构体 結構體
-max 最大值 最大值
-min 最小值 最小值
-cin c输入 c輸入
-cout c输出 c輸出
-printf 输入f 輸入f
-scanf 输出f 輸出f
+4
+1:English 2:中文简体 3:中文繁體 4:不要用这个
+please enter the original file path :
+请输入原始文件路径:
+請輸入原始文件路徑:
+把你想改的送进去吧:
+please enter the file path after you change:
+请输入想要更改后的文件路径:
+請輸入想要更改後的文件路徑:
+改造完怎么出来呢?:
+please enter the original language(the option serial number):
+请输入原始语言:
+請輸入原始語言:
+你原来长啥样?:
+please fill in the language you want to change(the option serial number):
+请输入想要更改后的语言:
+請輸入想要更改後的語言:
+你想长啥样?:
+include 包含头文件 包含圖文件 我超!头文件!
+std 标准 標準 这个有点正经
+using 使用 使用 用这个啊
+namespace 命名空间 命名空間 这是什么
+int 整数 整數 溢出了诶
+main 主要函数 主要函數 到了主章节了
+char 字符 字符 短短的很可爱
+string 字符串 字符串 差不多不够的都用这个
+if 如果 如果 开始做出了抉择
+return 返回 返回 这个函数完事了
+continue 跳转下一次循环 跳轉下一次循環 这个废了，下一个吧
+break 终止 終止 完蛋保不住了
+while 条件循环 條件循環 不到条件出不去
+for 遍历循环 遍歷循環 便利循环
+insert 插入 插入 从中间插进去
+void 无类型 無類型 这个空空的
+else 否则 否則 你条件没达成
+bool 布尔 布爾 一好一坏
+class 类 類 班集体
+const 常量 常量 动不了的值
+default 默认 默認 这是别人都承认的
+delete 刪除 删除 要被无情删除了哦
+false 假 假 虚伪的
+true 真 真 真诚的
+long 长整数 長整數 这个长长的
+short 短整数 短整數 这个短短的
+struct 结构体 結構體 把长长的短短的都塞进去的
+max 最大值 最大值 找个最长的
+min 最小值 最小值 找个最短的
+cin c输入 c輸入 c在里边
+cout c输出 c輸出 c在外边
+printf 输出f 輸出f 打印f
+scanf 输入f 輸入f 扫描f
