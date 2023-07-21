@@ -1,0 +1,55 @@
+#包含头文件 <bits/标准c++.h>
+
+使用 命名空间 标准;
+
+字符串 pass,language,cinrule;
+整数 f1,f2;
+字符串 lang[2];
+字符串 res;
+
+void str_find(字符串 a){
+    a.insert(0," ");
+    整数 x1=-1,x2=-1;整数 t=0;整数 i=0;//x1x2标记位置
+    lang[0]=lang[1]="";//定义输出
+    遍历循环(;i<a.length();i++){
+        如果(a[i]==' ')t++;//换语言
+        如果(t==f1&&x1==-1){x1=i+1;}//标记语言1位置
+        如果(t==f1+1&&lang[0]==""){lang[0]=a.substr(x1,i-x1);}//语言1结束
+        如果(t==f2&&x2==-1){x2=i+1;}//标记语言2位置
+        如果(t==f2+1&&lang[1]==""){lang[1]=a.substr(x2,i-x2);}//语言2结束
+    }
+    如果(lang[0]=="")lang[0]=a.substr(x1,i);//防止结束没有存入
+    如果(lang[1]=="")lang[1]=a.substr(x2,i-x2);
+    返回;
+}
+
+整数 主要函数()
+{
+    fstream cin1,cin2,cout1;//打开文件
+    cin1.open("language.txt",fstream::in);//打开设定文件
+    cout1.open("result",fstream::out);//输出文件
+    getline(cin1,language);//获取输出规则
+    getline(cin1,cinrule);//获取输出规则
+    cout<<cinrule;
+    cin>>pass;//填写文件路径
+    cin2.open("then.txt",fstream::in);//bzd怎么写
+    getline(cin1,cinrule);//获取输出规则
+    cout<<language<<endl<<cinrule;
+    cin>>f1;//输入语言
+    getline(cin1,cinrule);//获取输出规则
+    cout<<cinrule;
+    cin>>f2;//输出语言
+    条件循环(getline(cin1,language)){//每一条程序
+        str_find(language);//找到输入和输出语言所在位置并存储
+//        cout<<lang[0]<<" "<<lang[1]<<endl;
+        条件循环(getline(cin2,res)){
+            整数 index=res.find(lang[0]);
+            条件循环(index>=0&&index<res.length()){
+                res.erase(index,lang[0].length());
+                res.insert(index,lang[1]);
+            }
+            cout1<<res<<endl;
+        }
+    }
+    返回 0;
+}

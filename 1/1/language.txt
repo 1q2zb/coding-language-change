@@ -1,0 +1,30 @@
+1:English 2:中文简体 3:中文繁體 4:日本語
+please enter the file path you want to change 请输入想要更改的文件路径 請輸入想要更改的文件路徑:
+please enter the original language(the option serial number) 请输入原始语言 請輸入原始語言:
+please fill in the language you want to change(the option serial number) 请输入想要更改后的语言 請輸入想要更改後的語言:
+include 包含头文件 包含圖文件
+std 标准 標準
+using 使用 使用
+namespace 命名空间 命名空間
+int 整数 整數
+main 主要函数 主要函數
+char 字符 字符
+string 字符串 字符串
+if 如果 如果
+return 返回
+continue 跳转下一次循环 跳轉下一次循環
+break 终止 終止
+while 条件循环 條件循環
+for 遍历循环 遍歷循環
+insert 插入 插入
+void 无类型 無類型
+else 否则 否則
+bool 布尔 布爾
+class 类 類
+const 常量 常量
+default 默认 默認
+delete 刪除 删除
+false 假 假
+long 长整数 長整數
+short 短整数 短整數
+struct 结构体 結構體
