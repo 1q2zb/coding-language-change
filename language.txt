@@ -28,3 +28,9 @@ false 假 假
 long 长整数 長整數
 short 短整数 短整數
 struct 结构体 結構體
+max 最大值 最大值
+min 最小值 最小值
+cin c输入 c輸入
+cout c输出 c輸出
+printf 输入f 輸入f
+scanf 输出f 輸出f
