@@ -1,18 +1,30 @@
-1:English 2:ÖĞÎÄ¼òÌå 3:ÖĞÎÄ·±ów 4:ÈÕ±¾ÕZ
-please enter the file path you want to change ÇëÊäÈëÏëÒª¸ü¸ÄµÄÎÄ¼şÂ·¾¶ Õˆİ”ÈëÏëÒª¸ü¸ÄµÄÎÄ¼şÂ·½:
-please enter the original language(the option serial number) ÇëÊäÈëÔ­Ê¼ÓïÑÔ Õˆİ”ÈëÔ­Ê¼ÕZÑÔ:
-please fill in the language you want to change(the option serial number) ÇëÊäÈëÏëÒª¸ü¸ÄºóµÄÓïÑÔ Õˆİ”ÈëÏëÒª¸ü¸ÄááµÄÕZÑÔ:
-include °üº¬Í·ÎÄ¼ş °üº¬ˆDÎÄ¼ş
-std ±ê×¼ ˜ËœÊ
-using Ê¹ÓÃ Ê¹ÓÃ
-namespace ÃüÃû¿Õ¼ä ÃüÃû¿Õég
-int ÕûÊı Õû”µ
-main Ö÷Òªº¯Êı Ö÷Òªº¯”µ
-char ×Ö·û ×Ö·û
-string ×Ö·û´® ×Ö·û´®
-if Èç¹û Èç¹û
-return ·µ»Ø
-continue Ìø×ªÏÂÒ»´ÎÑ­»· ÌøŞDÏÂÒ»´ÎÑ­­h
-break ÖÕÖ¹ ½KÖ¹
-while Ìõ¼şÑ­»· —l¼şÑ­­h
-for ±éÀúÑ­»· ±éšvÑ­­h
+1:English 2:ä¸­æ–‡ç®€ä½“ 3:ä¸­æ–‡ç¹é«” 4:æ—¥æœ¬èª
+please enter the file path you want to change è¯·è¾“å…¥æƒ³è¦æ›´æ”¹çš„æ–‡ä»¶è·¯å¾„ è«‹è¼¸å…¥æƒ³è¦æ›´æ”¹çš„æ–‡ä»¶è·¯å¾‘:
+please enter the original language(the option serial number) è¯·è¾“å…¥åŸå§‹è¯­è¨€ è«‹è¼¸å…¥åŸå§‹èªè¨€:
+please fill in the language you want to change(the option serial number) è¯·è¾“å…¥æƒ³è¦æ›´æ”¹åçš„è¯­è¨€ è«‹è¼¸å…¥æƒ³è¦æ›´æ”¹å¾Œçš„èªè¨€:
+include åŒ…å«å¤´æ–‡ä»¶ åŒ…å«åœ–æ–‡ä»¶
+std æ ‡å‡† æ¨™æº–
+using ä½¿ç”¨ ä½¿ç”¨
+namespace å‘½åç©ºé—´ å‘½åç©ºé–“
+int æ•´æ•° æ•´æ•¸
+main ä¸»è¦å‡½æ•° ä¸»è¦å‡½æ•¸
+char å­—ç¬¦ å­—ç¬¦
+string å­—ç¬¦ä¸² å­—ç¬¦ä¸²
+if å¦‚æœ å¦‚æœ
+return è¿”å›
+continue è·³è½¬ä¸‹ä¸€æ¬¡å¾ªç¯ è·³è½‰ä¸‹ä¸€æ¬¡å¾ªç’°
+break ç»ˆæ­¢ çµ‚æ­¢
+while æ¡ä»¶å¾ªç¯ æ¢ä»¶å¾ªç’°
+for éå†å¾ªç¯ éæ­·å¾ªç’°
+insert æ’å…¥ æ’å…¥
+void æ— ç±»å‹ ç„¡é¡å‹
+else å¦åˆ™ å¦å‰‡
+bool å¸ƒå°” å¸ƒçˆ¾
+class ç±» é¡
+const å¸¸é‡ å¸¸é‡
+default é»˜è®¤ é»˜èª
+delete åˆªé™¤ åˆ é™¤
+false å‡ å‡
+long é•¿æ•´æ•° é•·æ•´æ•¸
+short çŸ­æ•´æ•° çŸ­æ•´æ•¸
+struct ç»“æ„ä½“ çµæ§‹é«”
