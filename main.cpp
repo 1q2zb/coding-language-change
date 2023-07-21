@@ -7,6 +7,16 @@ int f1,f2;
 string lang[2];
 string res;
 
+int get(string a){//判断注释以保证注释后文字不会被翻译
+    int t=0;
+    for(int i=0;i<a.length();i++){
+        if(t==1&&a[i]!='/')t=0;
+        if(a[i]=='/')t++;
+        if(t==2)return i-1;//返回注释前第一个'/'的位置
+    }
+    return a.length();
+}
+
 void str_find(string a){
     a.insert(0," ");//插入空格以保证f1和f2取值统一
     int x1=-1,x2=-1;int t=0;int i=0;//x1x2标记位置
@@ -32,7 +42,7 @@ int main()
     getline(cin1,cinrule);//获取输出规则
     cout<<cinrule;
     cin>>pass;//填写文件路径
-    cin2.open("then.txt",fstream::in);//bzd怎么写
+    cin2.open(pass.c_str(),fstream::in);//bzd怎么写
     getline(cin1,cinrule);//获取输出规则
     cout<<language<<endl<<cinrule;
     cin>>f1;//输入语言
@@ -46,7 +56,7 @@ int main()
         while(getline(cin1,language)){//每一条语言
             str_find(language);//找到输入和输出语言所在位置并存储
             int index;
-            while(res.find(lang[0])>=0&&res.find(lang[0])<res.length()){//判断是否存在
+            while(res.find(lang[0])>=0&&res.find(lang[0])<get(res)){//判断是否存在
                 index=res.find(lang[0]);//获取原语言所在位置
                 res.erase(index,lang[0].length());//删除原语言
                 res.insert(index,lang[1]);//改为新语言
